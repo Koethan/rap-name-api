@@ -35,7 +35,7 @@ app.get('/api/:name', (request, response) => {
     
 })
 
-
-app.listen(PORT, () => {
+//process.env.PORT is a key that lets the host site use whatever they want to use as a port, if it doesnt exist, then just use our port.
+app.listen(process.env.PORT || PORT, () => {
     console.log(`The server is now running on port ${PORT}! Betta Go Catch It!`)
 })
